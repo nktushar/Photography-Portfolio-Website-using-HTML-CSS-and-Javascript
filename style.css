@@ -128,3 +128,175 @@ nav{
 .nav-socials a:hover{
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
 }
+
+
+
+
+/* ================ Header ============== */
+header{
+    max-width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    background: linear-gradient(var(--color-bg-3), var(--color-bg-1));
+    overflow: hidden;
+}
+
+.header-container{
+    display: grid;
+    grid-template-columns: 43% 53%;
+    gap: 4%;
+    margin-top: 10rem;
+    position: relative;
+}
+
+.header-image-bg{
+    background: var(--color-bg-4);
+    height: 22rem;
+    width: 16rem;
+    position: absolute;
+}
+
+.header-image-lg{
+    width: 29rem;
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+    filter: saturate(0) brightness(0.3);
+    transition: var(--transition);
+}
+
+.header-image-sm{
+    width: 28rem;
+    height: 28rem;
+    overflow: hidden;
+    position: absolute;
+    left: 6rem;
+    top: 6rem;
+    transition: all 400ms ease;
+}
+
+.header-left:hover .header-image-sm{
+    opacity: 0;
+}
+
+.header-left:hover .header-image-lg{
+    filter: saturate(1) brightness(1);
+    border: 1rem solid var(--color-bg-4);
+    top: 0;
+    left: 0;
+}
+
+
+.header-head{
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.empty{
+    height: 3.5rem;
+    width: 18rem;
+    background: var(--color-bg-2);
+    border-radius: calc(3.5rem / 2);
+    margin-bottom: 3.5rem;
+    box-shadow: inset 0 1rem 1rem rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-bg-4);
+}
+
+.header-tag{
+    color: var(--color-primary-variant);
+}
+
+.header-right p{
+    margin-top: 2rem;
+    width: 85%;
+}
+
+/* Only shows on small device */
+.header-btn-md{
+    display: none;
+}
+
+.header-frames{
+    position: absolute;
+    top: 88vh;
+    right: 46rem;
+    transition: var(--transition);
+}
+
+.header-frame{
+    width: 14rem;
+    border: 0.4rem solid var(--color-bg-3);
+    box-shadow: 0 0 4rem rgba(0, 0, 0, 0.5);
+    position: absolute;
+    transform: rotate(-10deg);
+    transform-origin: bottom left;
+    transition: var(--transition);
+}
+
+.header-frame:nth-child(2){
+    transform: rotate(20deg);
+    top: -2rem;
+    left: 2rem;
+}
+
+.header-frames:hover .header-frame{
+    transform: rotate(0);
+}
+
+.header-frames:hover .header-frame:nth-child(2){
+    top: 0;
+    left: 15rem;
+}
+
+/* Genereal Style for Contact Button */
+.contact-btn{
+    color: var(--color-bg-1);
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.header-btn{
+    background: linear-gradient(-30deg, var(--color-primary-variant), var(--color-primary), var(--color-primary-variant));
+    position: absolute;
+    right: 6%;
+    bottom: -3rem;
+}
+
+.header-btn:hover{
+    box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.3);
+    transform: translateY(-1rem);
+    color: var(--color-bg-1);
+}
+
+.contact-btn i{
+    font-size: 3.5rem;
+    position: absolute;
+}
+
+.contact-btn p{
+    font-size: 1rem;
+    font-weight: 600;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    animation: spinText 15s linear infinite;
+}
+
+.contact-btn p span{
+    position: absolute;
+    transform-origin: 0.3rem 5rem;
+}
+
+@keyframes spinText{
+    to{
+        transform: rotate(360deg);
+    }
+}
