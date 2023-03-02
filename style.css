@@ -381,3 +381,159 @@ header{
 .about-right p{
     margin: 0 4rem 1.5rem 0;
 }
+
+
+/* <!-- ===========================Gallery============================ --> */
+#gallery{
+    margin-top: 12rem;
+}
+
+.gallery-head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery-container p{
+    width: 45rem;
+}
+
+.swiper-wrapper{
+    margin-top: 5rem;
+    height: 37rem;
+    padding-bottom: 5rem;
+}
+
+.swiper-slide{
+    border: 0.5rem solid var(--color-bg-4);
+    height: fit-content;
+    max-height: 36rem;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.swiper-slide:hover{
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+.swiper-slide img{
+    filter: saturate(0);
+    transition: var(--transition);
+}
+
+.swiper-slide:hover img{
+    filter: saturate(1);
+}
+
+
+/* <!-- ===========================Exhibitions============================ --> */
+#exhibitions{
+    margin-top: 10rem;
+}
+
+.exhibitions-container{
+    position: relative;
+}
+
+.exhibitions-empty{
+    width: 26rem;
+    position: absolute;
+    right: 14rem;
+    top: 0;
+}
+
+.exhibitions-head{
+    display: grid;
+    grid-template-columns: auto 10rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exhibitions-head > p{
+    width: 45rem;
+}
+
+.exhibitions-btn{
+    color: var(--color-primary-variant);
+}
+
+.exhibitions-btn:hover{
+    transform: translateY(-1rem);
+}
+
+.exhibitions-gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 5rem;
+    gap: 3rem;
+}
+
+.exhibitions-gallery article{
+    border: 0.5rem solid var(--color-bg-4);
+    transition: var(--transition);
+}
+
+.exhibitions-gallery article:nth-child(1){
+    grid-row: 1/3;
+}
+
+.exhibitions-gallery article:nth-child(4){
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+
+.exhibitions-gallery article img{
+    height: 100%;
+    filter: saturate(0);
+    transition: var(--transition);
+}
+
+.exhibitions-gallery article:hover img{
+    filter: saturate(1);
+}
+
+.exhibitions-gallery article:hover{
+    box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* <!-- ===========================Footer============================ --> */
+ footer{
+    margin-top: 7rem;
+ }
+
+ .footer-container{
+    border-top: 0.5rem solid var(--color-bg-4);
+    padding-top: 5rem;
+ }
+
+ .footer-head{
+    display: flex;
+    align-items: center ;
+    gap: 2rem;
+ }
+
+ .footer-btn{
+    width: 5rem;
+    height: 5rem;
+    border: 0.2rem solid var(--color-primary-variant);
+    border-radius: 50%;
+    font-size: 3rem;
+    color: var(--color-primary-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+ }
+ 
+ .footer-btn:hover{
+    transform: translateY(-1rem);
+    border-color: var(--color-primary);
+ }
+
+ .footer-links{
+    margin: 3rem 0 5rem;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+ }
