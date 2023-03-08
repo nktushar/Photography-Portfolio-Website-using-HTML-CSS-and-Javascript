@@ -840,10 +840,4 @@ header{
         gap: 2rem;
         margin-top: 5rem;
     }
-
-    .footer-links2{
-        flex-direction: column;
-        gap: 2rem;
-        margin-top: 5rem;
-    }
 }
