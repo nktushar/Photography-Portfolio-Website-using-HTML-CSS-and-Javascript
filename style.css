@@ -25,6 +25,18 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar{
+    width: 0.5rem;
+    background: rgb(299, 165, 93, 0.2);
+}
+
+::-webkit-scrollbar-thumb{
+    width: 100%;
+    background: var(--color-primary-variant);
+    border-radius: 0.25rem;
+}
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -565,7 +577,6 @@ header{
     .nav-links{
         position: absolute;
         top: 100%;
-        
         right: 0;
         flex-direction: column;
         gap: 0;
@@ -603,7 +614,7 @@ header{
     /* ---------------header---------------- */
     header{
         height: fit-content;
-        padding: 14rem 0 12rem;
+        padding: 12rem 0 10rem;
         display: grid;
         place-items: center;
     }
@@ -624,6 +635,8 @@ header{
         width: 100%;
         top: 0;
         left: 0;
+        border-radius: 15rem 15rem 0 0;
+        overflow: hidden;
     }
 
     .empty{
@@ -717,6 +730,115 @@ header{
         border: none;
     }
 
+}
 
+
+
+/* =================Media Queries (Small Screen)==================== */
+@media screen and (max-width: 600px){
+    h1, h2{
+        font-size: 2rem;
+        line-height: 1.3;
+        color: var(--color-white);
+    }
+
+    header{
+        padding: 0;
+        padding-bottom: 6rem;
+    }
+
+    .header-container{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .header-image-lg{
+        width: 80%;
+        height: 20rem;
+        margin: 0 auto;
+        margin-top: 7rem;
+        overflow: hidden;
+    }
+
+    .header-head{
+        justify-content: center;
+    }
+
+    .header-right-p{
+        margin-top: 1rem;
+    }
+
+    .header-title{
+        margin-top: 1rem;
+    }
+
+    /* -------------about----------- */
+    .about-container{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-right p{
+        width: 100%;
+    }
+
+    .swiper-slide{
+        border: 0;
+    }
+
+
+    /* -------------gallery----------- */
+    #gallery{
+        margin-top: 6rem;
+    }
+
+    .gallery-container p{
+        margin-top: 1rem;
+    }
+
+    .swiper-wrapper{
+        margin-top: 3rem;
+    }
+
+
+    /* -------------exhibitions----------- */
+    #exhibitions{
+        margin-top: 6rem;
+    }
+
+    .exhibitions-head{
+        grid-template-columns: 1fr;
+    }
+
+    .exhibitions-head > p{
+        margin-top: 1rem;
+    }
+
+    .exhibitions-gallery{
+        display: block;
+    }
+
+    .exhibitions-gallery article{
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 1rem;
+    }
+
+
+    /* -------------footer----------- */
+    .footer-head{
+        flex-direction: column;
+    }
+
+    .footer-head h2{
+        font-size: 1.5rem;
+    }
+
+    .footer-links{
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 5rem;
+    }
 
 }

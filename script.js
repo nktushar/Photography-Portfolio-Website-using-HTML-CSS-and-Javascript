@@ -48,13 +48,16 @@ var swiper = new Swiper(".mySwiper", {
 
   const closeNav = () => {
     nav.style.display = 'none';
-    closeNavBtn.style.display = 'none';
     openNavBtn.style.display = 'inline-block';
+    closeNavBtn.style.display = 'none';
   }
   closeNavBtn.addEventListener('click', closeNav);
 
-  nav.querySelectorAll('li a').forEach(navLink => {
-    navLink.addEventListener('click', closeNav);
-  })
+
+  if(document.body.clientwidth < 1024){
+    nav.querySelectorAll('li a').forEach(navLink => {
+      navLink.addEventListener('click', closeNav);
+    })
+  }
 
   
